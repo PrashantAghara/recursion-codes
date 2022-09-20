@@ -1,6 +1,9 @@
 package com.recursion;
 
+import com.recursion.extended.Parenthesis;
 import com.recursion.ibh.*;
+import com.recursion.inout.Letter;
+import com.recursion.inout.Permutation;
 import com.recursion.inout.Subset;
 
 import java.util.ArrayList;
@@ -64,6 +67,20 @@ public class Main {
         subset.printSubset("ab", "");
         System.out.println(" === Unique Subset Problem (Print PowerSet Or All Subsequence of String ===");
         subset.printUniqueSubset("aab", "");
-
+        System.out.println();
+        System.out.println(" === Permutation With Spaces ===");
+        Permutation permutation = new Permutation();
+        permutation.printPermutationWithSpaces("ABC", "");
+        System.out.println(" === Permutation With Case Changes ===");
+        permutation.printPermutationWithChange("abc", "");
+        System.out.println(" === Letter Case Change === ");
+        Letter letter = new Letter();
+        letter.printLetterCaseChange("A1B2c3");
+        System.out.println(" =*=*=*=*= Input Output Method With Recursive Tree =*=*=*=*= ");
+        System.out.println();
+        System.out.println(" =*=*=*=*= Extended Input Output Method With Recursive Tree =*=*=*=*= ");
+        System.out.println(" === Generate Balance Parenthesis === ");
+        Parenthesis parenthesis = new Parenthesis();
+        System.out.println(parenthesis.getBalanceParenthesis(3));
     }
 }
