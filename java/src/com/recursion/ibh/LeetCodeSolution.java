@@ -8,9 +8,9 @@ public class LeetCodeSolution {
         }
         int mid = (int) ((Math.pow(2, n - 1)) / 2);
         if (k <= mid) {
-            return generate(n - 1, k) ^ 1;
+            return generate(n - 1, k);
         } else {
-            return generate(n - 1, k - mid) & 0;
+            return generate(n - 1, k - mid) ^ 1;
         }
     }
 }
