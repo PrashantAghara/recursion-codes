@@ -5,6 +5,7 @@ import { multiply } from "./ibh/multipy.js";
 import { generateGrammar } from "./ibh/kthSymbol.js";
 import Stack from "./datastructure/Stack.js";
 import { deleteMiddle, reverse, sortStack } from "./ibh/stackOperation.js";
+import { getAlivePosition } from "./ibh/josephus.js";
 
 console.log(" =*=*=*=*= IBH Method =*=*=*=*= ");
 console.log("=== Print Number ====");
@@ -37,4 +38,6 @@ console.log("=== Remove Middle Element from Stack ===");
 let k = Math.floor(stack.size() / 2 + 1);
 deleteMiddle(stack, k);
 stack.printStack();
+console.log("=== Josephus Problem ===");
+console.log(getAlivePosition(40, 7));
 console.log(" =*=*=*=*= IBH Method =*=*=*=*= ");
