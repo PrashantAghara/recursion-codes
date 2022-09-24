@@ -1,5 +1,6 @@
 package com.recursion;
 
+import com.recursion.extended.BinaryNumber;
 import com.recursion.extended.Parenthesis;
 import com.recursion.ibh.*;
 import com.recursion.inout.Letter;
@@ -59,6 +60,10 @@ public class Main {
         System.out.println(" === Tower Of Honoi === ");
         TowerOfHonoi towerOfHonoi = new TowerOfHonoi();
         towerOfHonoi.printSteps(3, 1, 2, 3);
+
+        System.out.println(" === Josephus Problem === ");
+        Josephus josephus = new Josephus();
+        System.out.println(josephus.getAlivePosition(40, 7));
         System.out.println(" =*=*=*=*= IBH Method =*=*=*=*= ");
         System.out.println();
         System.out.println(" =*=*=*=*= Input Output Method With Recursive Tree =*=*=*=*= ");
@@ -82,5 +87,9 @@ public class Main {
         System.out.println(" === Generate Balance Parenthesis === ");
         Parenthesis parenthesis = new Parenthesis();
         System.out.println(parenthesis.getBalanceParenthesis(3));
+        System.out.println(" === N Digit Binary Numbers with #1s >= #0s");
+        BinaryNumber binaryNumber = new BinaryNumber();
+        binaryNumber.generateNDigitBinaryNumber(3, "", 0, 0);
+        System.out.println(" =*=*=*=*= Extended Input Output Method With Recursive Tree =*=*=*=*= ");
     }
 }
