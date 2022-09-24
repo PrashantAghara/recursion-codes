@@ -6,6 +6,14 @@ import { generateGrammar } from "./ibh/kthSymbol.js";
 import Stack from "./datastructure/Stack.js";
 import { deleteMiddle, reverse, sortStack } from "./ibh/stackOperation.js";
 import { getAlivePosition } from "./ibh/josephus.js";
+import { printSubset } from "./inout/subset.js";
+import { printLetterCaseChange } from "./inout/letter.js";
+import {
+  printPermutationWithChange,
+  printPermutationWithSpaces,
+} from "./inout/permutation.js";
+import { getBalanceParenthesis } from "./extended/paranthesis.js";
+import { generateNDigitBinaryNumber } from "./extended/binaryNumber.js";
 
 console.log(" =*=*=*=*= IBH Method =*=*=*=*= ");
 console.log("=== Print Number ====");
@@ -41,3 +49,25 @@ stack.printStack();
 console.log("=== Josephus Problem ===");
 console.log(getAlivePosition(40, 7));
 console.log(" =*=*=*=*= IBH Method =*=*=*=*= ");
+console.log();
+console.log(" =*=*=*=*= Input Output Method With Recursive Tree =*=*=*=*= ");
+console.log(" === Subset Problem ===");
+printSubset("ab", "");
+console.log(" === Permutation With Spaces ===");
+printPermutationWithSpaces("ABC", "");
+console.log(" === Permutation With Case Changes ===");
+printPermutationWithChange("abc", "");
+console.log(" === Letter Case Change === ");
+printLetterCaseChange("A1B2c3");
+console.log(" =*=*=*=*= Input Output Method With Recursive Tree =*=*=*=*= ");
+console.log();
+console.log(
+  " =*=*=*=*= Extended Input Output Method With Recursive Tree =*=*=*=*= "
+);
+console.log(" === Generate Balance Parenthesis === ");
+getBalanceParenthesis(3);
+console.log(" === N Digit Binary Numbers with #1s >= #0s");
+generateNDigitBinaryNumber(3, "", 0, 0);
+console.log(
+  " =*=*=*=*= Extended Input Output Method With Recursive Tree =*=*=*=*= "
+);
