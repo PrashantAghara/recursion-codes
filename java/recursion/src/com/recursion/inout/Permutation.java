@@ -10,7 +10,7 @@ public class Permutation {
         String op1 = out;
         String op2 = out;
         op1 = op1.concat(String.valueOf(in.charAt(0)));
-        op2 = op2.concat(" " + String.valueOf(in.charAt(0)));
+        op2 = op2.concat(" " + in.charAt(0));
         in = in.substring(1);
         printPermutationWithSpaces(in, op1);
         printPermutationWithSpaces(in, op2);
