@@ -2,6 +2,7 @@ package com.tree;
 
 import com.tree.build.BuildTree;
 import com.tree.build.Traversal;
+import com.tree.problems.Easy;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,7 +16,6 @@ public class Main {
         Traversal traversal = new Traversal();
         System.out.println("LEVEL ORDER TRAVERSAL : ");
         traversal.levelOrderTraversal(root);
-
         System.out.println("INORDER TRAVERSAL : ");
         traversal.inOrderTraversal(root);
         System.out.println();
@@ -24,5 +24,9 @@ public class Main {
         System.out.println();
         System.out.println("PREORDER TRAVERSAL : ");
         traversal.preOrderTraversal(root);
+
+        Easy easy = new Easy();
+        System.out.println("======= PROBLEMS ========");
+        easy.noOfLeafNodes(root);
     }
 }
