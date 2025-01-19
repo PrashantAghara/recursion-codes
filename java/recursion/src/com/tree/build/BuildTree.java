@@ -1,5 +1,9 @@
 package com.tree.build;
 
+import com.tree.Node;
+
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 /*
@@ -10,8 +14,8 @@ import java.util.Scanner;
 7 11 17 NULL
  */
 public class BuildTree {
+    Scanner sc = new Scanner(System.in);
     public Node buildTree(Node root) {
-        Scanner sc = new Scanner(System.in);
         System.out.print("Enter the data : ");
         int data = sc.nextInt();
         root = new Node(data);
@@ -35,6 +39,35 @@ public class BuildTree {
         root.left.left = new Node(7);
         root.left.right = new Node(11);
         root.right.left = new Node(17);
+        return root;
+    }
+
+    public Node buildFromLevelOrder(Node root) {
+        Queue<Node> queue = new LinkedList<>();
+        System.out.println("Enter the data for root : ");
+        int data = sc.nextInt();
+        root = new Node(data);
+        queue.add(root);
+
+        while (!queue.isEmpty()) {
+            Node temp = queue.poll();
+
+            System.out.println("Enter left node for " + temp.data + " : ");
+            int leftData = sc.nextInt();
+
+            if (leftData != -1) {
+                temp.left = new Node(leftData);
+                queue.add(temp.left);
+            }
+            System.out.println("Enter right node for " + temp.data + " : ");
+            int rightData = sc.nextInt();
+
+            if (rightData != -1) {
+                temp.right = new Node(rightData);
+                queue.add(temp.right);
+            }
+        }
+
         return root;
     }
 }

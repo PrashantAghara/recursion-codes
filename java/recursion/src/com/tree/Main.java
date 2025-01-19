@@ -1,7 +1,6 @@
 package com.tree;
 
 import com.tree.build.BuildTree;
-import com.tree.build.Node;
 import com.tree.build.Traversal;
 
 public class Main {
@@ -9,6 +8,9 @@ public class Main {
         BuildTree buildTree = new BuildTree();
         Node root = buildTree.buildTree();
 //        root = buildTree.buildTree(root);
+        //1 3 5 7 11 17 -1 -1 -1 -1 -1 -1 -1
+//        Node root = null;
+//        root = buildTree.buildFromLevelOrder(root);
 
         Traversal traversal = new Traversal();
         System.out.println("LEVEL ORDER TRAVERSAL : ");
