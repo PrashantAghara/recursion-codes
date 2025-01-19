@@ -27,5 +27,36 @@ public class Traversal {
         }
     }
 
+    // NLR
+    public void preOrderTraversal(Node root) {
+        if (root == null) {
+            return;
+        }
 
+        System.out.print(root.data + " ");
+        preOrderTraversal(root.left);
+        preOrderTraversal(root.right);
+    }
+
+    //LNR
+    public void inOrderTraversal(Node root) {
+        if (root == null) {
+            return;
+        }
+
+        inOrderTraversal(root.left);
+        System.out.print(root.data + " ");
+        inOrderTraversal(root.right);
+    }
+
+    //LRN
+    public void postOrderTraversal(Node root) {
+        if (root == null) {
+            return;
+        }
+
+        postOrderTraversal(root.left);
+        postOrderTraversal(root.right);
+        System.out.print(root.data + " ");
+    }
 }

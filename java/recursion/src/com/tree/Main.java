@@ -11,6 +11,16 @@ public class Main {
 //        root = buildTree.buildTree(root);
 
         Traversal traversal = new Traversal();
+        System.out.println("LEVEL ORDER TRAVERSAL : ");
         traversal.levelOrderTraversal(root);
+
+        System.out.println("INORDER TRAVERSAL : ");
+        traversal.inOrderTraversal(root);
+        System.out.println();
+        System.out.println("POSTORDER TRAVERSAL : ");
+        traversal.postOrderTraversal(root);
+        System.out.println();
+        System.out.println("PREORDER TRAVERSAL : ");
+        traversal.preOrderTraversal(root);
     }
 }
